@@ -82,6 +82,12 @@ export default class ViewController {
         res.render('user', {user, isAdmin})
     }
 
+    getChat = (req, res) => {
+        let user = req.user.user;
+        console.log(user)
+        res.render('chat', {user});
+    }
+
     getAll = (req, res) => {
         res.render('NotFound');
 

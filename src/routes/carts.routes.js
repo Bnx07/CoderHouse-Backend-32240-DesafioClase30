@@ -2,6 +2,7 @@ import { Router } from "express";
 import passport from "passport";
 import CartController from '../controller/carts.controller.js';
 import TicketController from "../controller/tickets.controller.js";
+import { isUser } from "../middlewares/isUser.js";
 
 const cc = new CartController();
 const tc = new TicketController();
@@ -14,11 +15,11 @@ router.get('/:cid', cc.getOne);
 
 router.post('/', cc.post);
 
-router.put('/:cid', cc.put);
+router.put('/:cid', isUser, cc.put);
 
-router.put('/:cid/product/:pid', cc.putProduct);
+router.put('/:cid/product/:pid', isUser, cc.putProduct);
 
-router.delete('/:cid/product/:pid', cc.deleteProduct);
+router.delete('/:cid/product/:pid', isUser, cc.deleteProduct);
 
 router.delete('/:cid', cc.delete);
 
