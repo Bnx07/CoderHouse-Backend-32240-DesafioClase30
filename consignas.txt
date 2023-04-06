@@ -1,0 +1,28 @@
+Aplicar arquitectura profesional por capas
+Aplicar patrones de diseño
+Aplicar mailing
+Aplicar variables de entorno
+Aplicar factory
+Aplicar DAO devuelto por factory
+Aplicar DTO
+Aplicar patrón repository
+Modificar ruta current para no enviar información sensible, enviar DTO del usuario
+Realizar middleware que trabaje en conjunto con la estrategia current para hacer sistema de autorización y delimitar endpoints:
+    Solo los administradores pueden crear, actualizar y eliminar productos
+    Solo usuarios pueden enviar mensajes al chat
+    Solo el usuario puede agregar productos a su carrito
+Crear modelo ticket con todas las formalizaciones del pago
+Aplicar ruta /:cid/purchase que revisa stock y formaliza la transaccion, crear ticket y devolver al carrito los productos que no se pudieron agregar
+
+PARA HOY:
+    1   Done
+    3   Done
+    4   Done
+    5   Done
+    6   Done
+    7   Done
+    8   Mismo que factory pero para memory  Va a haber que cambiar los imports de controllers (Fácil)  
+    9   Done
+    10  Hacer condicion con req             if (req.user.user.role == 'user') next() y eso              Está en views.routes.js
+    14  Done
+    15  Done
